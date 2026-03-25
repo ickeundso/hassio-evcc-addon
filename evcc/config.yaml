@@ -1,27 +1,24 @@
 ---
-name: evcc
-version: 0.303.2
-slug: evcc
-description: EV Charge Controller!
-url: https://github.com/evcc-io/evcc
-arch: 
-  - armhf
-  - armv7
+name: evcc (Feature Branch)
+version: 0.303.2-feature
+slug: evcc_feature
+description: "evcc Feature Branch - Min+PV respects bufferSoc"
+url: https://github.com/ickeundso/hassio-evcc-addon
+arch:
   - aarch64
   - amd64
-  - i386
 startup: application
 panel_icon: mdi:ev-station
 panel_admin: false
-boot: auto
+boot: manual
 legacy: true
-stage: stable
+stage: experimental
 ingress: true
 ingress_port: 7070
 init: false
 watchdog: http://[HOST]:[PORT:7070]
-image: evcc/evcc
-options: 
+image: ghcr.io/ickeundso/evcc-feature-{arch}
+options:
   sqlite_file: /data/evcc.db
   config_file: /config/evcc.yaml
 schema:
@@ -30,7 +27,7 @@ schema:
   OPTIMIZER_URI: url?
   SEMP_BASE_URL: url?
 host_network: true
-map: 
+map:
   - type: addon_config
     read_only: False
   - type: homeassistant_config
