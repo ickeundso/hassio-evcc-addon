@@ -1,6 +1,6 @@
 ---
 name: evcc (Feature Branch)
-version: 0.303.2-feature
+version: 0.303.2-feature.1
 slug: evcc_feature
 description: "evcc Feature Branch - Min+PV respects bufferSoc"
 url: https://github.com/ickeundso/hassio-evcc-addon
@@ -19,7 +19,7 @@ init: false
 watchdog: http://[HOST]:[PORT:7070]
 image: ghcr.io/ickeundso/evcc-feature-{arch}
 options:
-  sqlite_file: /data/evcc.db
+  sqlite_file: /config/evcc.db
   config_file: /config/evcc.yaml
 schema:
   sqlite_file: str
