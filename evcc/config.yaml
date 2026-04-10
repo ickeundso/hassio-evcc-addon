@@ -1,8 +1,8 @@
 ---
 name: evcc (Feature Branch use ML)
-version: 0.303.2-use-ml.1
+version: 0.303.2-use-ml.2
 slug: evcc_feature
-description: "evcc Feature Branch - Min+PV respects bufferSoc"
+description: "evcc Feature Branch - A/B optimizer shadow evaluation + bufferSoc fix"
 url: https://github.com/ickeundso/hassio-evcc-addon
 arch:
   - aarch64
