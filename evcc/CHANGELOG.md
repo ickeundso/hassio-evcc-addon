@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.303.2-use-ml.4
+
+- Fix: TLS verification disabled for A/B optimizer client — works with self-signed LAN certs
+- Both http:// and https:// now work for ML_OPTIMIZER_URI
+
 ## 0.303.2-use-ml.3
 
 - Fix: A/B optimizer logs now appear at INFO level (were invisible at default log config)
