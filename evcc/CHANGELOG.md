@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.315.0-use-ml.2
+
+- New: `GET /api/ab/entities` lists the metric entities with their id, group,
+  title and `isTemp` flag — needed to tell which loadpoint is the heat pump.
+
 ## 0.315.0-use-ml.1
 
 - New: authenticated CSV export at `GET /api/ab/export?from=…&to=…` — pulls the
