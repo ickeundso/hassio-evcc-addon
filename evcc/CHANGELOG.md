@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.315.0-use-ml.1
+
+- New: authenticated CSV export at `GET /api/ab/export?from=…&to=…` — pulls the
+  A/B shadow data off the add-on without copying the whole evcc.db. Needs an API
+  key in the `Authorization: Bearer …` header; `from`/`to` are mandatory.
+- Changed: merged evcc 0.315.0. This includes the upstream Mode Redesign —
+  `pv` and `minpv` are deprecated input aliases now and normalize to `smart` plus
+  always charge. The bufferSoc drain protection follows always charge and behaves
+  as before.
+- Changed: the add-on is aarch64 only; the amd64 image is no longer published.
+
+_Note: releases between 0.303.2-use-ml.4 and this one were not tracked here._
+
 ## 0.303.2-use-ml.4
 
 - Fix: TLS verification disabled for A/B optimizer client — works with self-signed LAN certs

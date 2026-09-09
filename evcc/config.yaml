@@ -1,12 +1,11 @@
 ---
 name: evcc (Feature Branch use ML)
-version: 0.314.3-use-ml.6
+version: 0.315.0-use-ml.1
 slug: evcc_feature
 description: "evcc Feature Branch - A/B optimizer shadow evaluation + bufferSoc fix"
 url: https://github.com/ickeundso/hassio-evcc-addon
 arch:
   - aarch64
-  - amd64
 startup: application
 panel_icon: mdi:ev-station
 panel_admin: false
