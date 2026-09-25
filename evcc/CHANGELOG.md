@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.316.0-use-ml.4
+
+- New: settings → system links to the Viessmann API page, so it is reachable from
+  the Home Assistant panel. Shown only when a Viessmann charger is configured.
+
 ## 0.316.0-use-ml.3
 
 - New: page `/#/viessmann` listing everything the Viessmann API reports for the
