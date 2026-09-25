@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.316.0-use-ml.2
+
+- Changed: Viessmann heat pump is polled every 3 minutes instead of every minute,
+  saving two thirds of the daily API quota shared with the ViCare app. Power and
+  hot water readings can be up to 3 minutes old.
+
 ## 0.316.0-use-ml.1
 
 - Changed: merged evcc 0.316.0 (includes 0.315.1 and 0.315.2).
