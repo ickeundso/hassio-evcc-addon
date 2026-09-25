@@ -4,6 +4,11 @@
 
 - New: settings → system links to the Viessmann API page, so it is reachable from
   the Home Assistant panel. Shown only when a Viessmann charger is configured.
+- New: single-room temperature logging from the Viessmann room control
+  (temperature, humidity, setpoint, window state), once per 15 minutes. Enable it
+  and name the rooms on the Viessmann API page; history is available as CSV.
+- Changed: values on the Viessmann API page (series, schedules, messages) are
+  shown as readable lines instead of raw JSON.
 
 ## 0.316.0-use-ml.3
 
