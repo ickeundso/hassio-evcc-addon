@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.316.0-use-ml.5
+
+- Fix: the value column on the Viessmann API page no longer collapses to a few
+  characters. Device messages show one field per line, timestamps are shortened.
+
 ## 0.316.0-use-ml.4
 
 - New: settings → system links to the Viessmann API page, so it is reachable from
