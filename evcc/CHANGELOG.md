@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.316.0-use-ml.6
+
+- New: the Viessmann API page charts the recorded history in three panels with
+  one shared time axis: room temperatures (one color per room), heating water
+  (supply, return, buffer tank, circuit supply) and energy per 15 minutes (house
+  without loadpoints, heat pump). Hovering shows the same moment in all panels.
+  Time range 24 h, 7 or 30 days; a table lists latest, min and max per room.
+- New: supply, return, buffer and circuit supply temperatures are recorded with
+  the rooms, once per 15 minutes (one more Viessmann call per slot).
+
 ## 0.316.0-use-ml.5
 
 - Fix: the value column on the Viessmann API page no longer collapses to a few
