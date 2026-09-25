@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.316.0-use-ml.3
+
+- New: page `/#/viessmann` listing everything the Viessmann API reports for the
+  heat pump — readable values and writable commands with their parameters and
+  limits. Read only, no command is executed. Requires login.
+
 ## 0.316.0-use-ml.2
 
 - Changed: Viessmann heat pump is polled every 3 minutes instead of every minute,
