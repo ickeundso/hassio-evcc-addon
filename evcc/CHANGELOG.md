@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.316.0-use-ml.1
+
+- Changed: merged evcc 0.316.0 (includes 0.315.1 and 0.315.2).
+- The upstream heating demand profile (#28232) replaces the branch's earlier
+  version; the household base load still prefers the same-weekday profile.
+- Fix: the add-on now reports its real version instead of a git-derived dev string.
+
 ## 0.315.0-use-ml.2
 
 - New: `GET /api/ab/entities` lists the metric entities with their id, group,
