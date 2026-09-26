@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.316.0-use-ml.8
+
+- Changed: the optimizer forecasts the Viessmann heat pump from a 7-day profile
+  scaled by the outdoor temperature forecast (demandtemperature) instead of the
+  28-day average, so cold nights are planned with more heat pump demand and the
+  home battery is kept for them.
+
 ## 0.316.0-use-ml.7
 
 - New: time ranges 24 h, 1 week, current month, last month and a custom date
