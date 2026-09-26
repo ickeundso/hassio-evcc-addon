@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.316.0-use-ml.9
+
+- New: the heat pump power includes the share Viessmann does not report:
+  standby (default 25 W), heating circuit pump while running (default 7 W) and
+  the secondary pump by its speed (default max. 60 W). All three are advanced
+  charger settings; set them to 0 to use Viessmann's value unchanged.
+- New: operating state timeline (heating, hot water, standby, defrost,
+  compressor on, heating circuit pump on) plus secondary pump and compressor
+  speed panels, recorded as 15 min snapshots with the rooms.
+- Changed: the energy panel names its stacked series unambiguously: house
+  (without heat pump), total without wallbox.
+
 ## 0.316.0-use-ml.8
 
 - Changed: the optimizer forecasts the Viessmann heat pump from a 7-day profile
