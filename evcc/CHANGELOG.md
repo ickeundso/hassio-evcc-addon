@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.316.0-use-ml.7
+
+- New: time ranges 24 h, 1 week, current month, last month and a custom date
+  span; an icon button reloads the charts from the stored data.
+- New: the energy panel shows the consumption over the selected range per
+  series in the legend and the total in its title.
+- New: heating rod periods are shaded in the energy panel, derived from its
+  daily consumption counters (recorded with the heating water temperatures, no
+  extra Viessmann call). Shown separately, not part of the total.
+- Changed: the filter bar of the API list sits below the charts.
+
 ## 0.316.0-use-ml.6
 
 - New: the Viessmann API page charts the recorded history in three panels with
