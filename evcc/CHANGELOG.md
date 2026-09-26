@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.316.0-use-ml.10
+
+- New: defrost lane in the operating state timeline. Besides the 15 min
+  snapshot of heating.outdoor.defrosting, the exact start and end times are
+  taken from the flag's change timestamp, so a defrost of a few minutes shows
+  even between two polls (an end without a seen start as a short tick).
+
 ## 0.316.0-use-ml.9
 
 - New: the heat pump power includes the share Viessmann does not report:
