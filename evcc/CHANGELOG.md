@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.316.0-use-ml.11
+
+- New: the room temperature panel shows the heat pump's own outdoor
+  temperature as a dashed reference line, recorded from now on with the heating
+  water temperatures (no extra Viessmann call).
+
 ## 0.316.0-use-ml.10
 
 - New: defrost lane in the operating state timeline. Besides the 15 min
