@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.316.0-use-ml.12
+
+- New: more operating lanes: evaporator, crankcase, condensate pan and fan
+  ring heaters, hot water heating and one-time charge, active heating program
+  (shows the night setback) and 4/3-way valve position. The heating rod has its
+  own lane right below defrost. Heater flags get exact change times like
+  defrost.
+- New: the outdoor fan (%) joins the secondary pump panel ("Pump & fan").
+- New: open windows (contact or detected) are shaded in the room's color in the
+  room temperature panel.
+- Changed: defrost is blue, hot water aqua.
+- Fix: the operating state panel resizes with its lane count.
+
 ## 0.316.0-use-ml.11
 
 - New: the room temperature panel shows the heat pump's own outdoor
