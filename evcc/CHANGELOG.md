@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.316.0-use-ml.13
+
+- Changed: energy panel no longer stacks. Heat pump and house each start at
+  zero, so the house base load shows as a flat line; the total without wallbox
+  is a dashed line, and the title total no longer counts it twice.
+- New: second state chart for exclusive modes: heating program and 4/3-way
+  valve position (one row each) plus hot water one-time charge. Colors are
+  unique within each chart.
+- Fix: the daily refresh of all Viessmann timestamps (around 21:12) no longer
+  shows up as short on/off marks. Condensate pan and fan ring heaters, which
+  report active all day, are left out.
+- Changed: consistent labels: heat pump supply/return (heat pump circuit),
+  buffer tank, supply heating circuit n, outdoor temperature (heat pump); the
+  heating circuit hint no longer assumes underfloor heating only.
+
 ## 0.316.0-use-ml.12
 
 - New: more operating lanes: evaporator, crankcase, condensate pan and fan
