@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.316.1-use-ml.14
+
+- Changed: based on evcc 0.316.1 plus the latest upstream fixes, among them
+  the optimizer battery limit without soc limits, tariff cache before the
+  first fetch, battery boost with several loadpoints and the confirmation
+  before battery grid export.
+- Fix: heating circuits are numbered from 1 as in Viessmann. The API counts
+  from 0, so the mixed circuit shows as heating circuit 2.
+
 ## 0.316.0-use-ml.13
 
 - Changed: energy panel no longer stacks. Heat pump and house each start at
