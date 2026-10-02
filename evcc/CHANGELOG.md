@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.316.1-use-ml.15
+
+- New: heat demand timeline on the Viessmann page. It shows when the heating
+  circuit requests heat (target supply above 0 °C) and which rooms are below
+  their setpoint. The heating water panel is shaded while the circuit requests
+  heat, the target supply is in the tooltip.
+- New: room setpoints and the circuit target supply are recorded. Setpoints
+  recorded so far are taken over once after the update.
+- Fix: the heating circuit hint no longer names circuit 1.
+
 ## 0.316.1-use-ml.14
 
 - Changed: based on evcc 0.316.1 plus the latest upstream fixes, among them
