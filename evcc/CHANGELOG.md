@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.316.1-use-ml.16
+
+- Changed: latest upstream fixes merged, among them: battery-supported
+  charging ends once the battery can no longer avoid grid import, the always
+  charge dropdown no longer switches to smart just by opening it, and Solcast
+  saves quota at night.
+
 ## 0.316.1-use-ml.15
 
 - New: heat demand timeline on the Viessmann page. It shows when the heating
