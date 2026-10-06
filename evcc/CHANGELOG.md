@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.316.1-use-ml.17
+
+- New: the stored request and responses of an optimizer run can be read via
+  the API (`/api/ab/run/{id}`, with login). This allows replaying runs the
+  solver ended without a proven optimum.
+
 ## 0.316.1-use-ml.16
 
 - Changed: latest upstream fixes merged, among them: battery-supported
