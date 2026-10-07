@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.316.1-use-ml.19
+
+- Fix: single wrong meter readings, far too low or far too high, are no
+  longer recorded as energy. Until now one such reading could book the whole
+  lifetime counter or millions of kWh into one quarter hour. This happened
+  with the pv, grid and battery meters and once stopped the optimizer.
+- Fix: the evcc page no longer flickers between "no connection" and the
+  normal view after Home Assistant was in the background for a longer time.
+  It now waits calmly until the connection really works again.
+
 ## 0.316.1-use-ml.18
 
 - New: hovering a bar in the timeline charts shows since when and until when
