@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.316.1-use-ml.18
+
+- New: hovering a bar in the timeline charts shows since when and until when
+  the state was on and for how long. The compressor adds the heat pump's
+  consumption in that time, the heating rod its own, a room's heat request
+  the lowest temperature. The legend shows the total time in the range.
+
 ## 0.316.1-use-ml.17
 
 - Changed: Viessmann charts use one central set of colors. The colors are
