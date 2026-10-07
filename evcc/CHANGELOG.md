@@ -6,6 +6,9 @@
   the state was on and for how long. The compressor adds the heat pump's
   consumption in that time, the heating rod its own, a room's heat request
   the lowest temperature. The legend shows the total time in the range.
+- New: the optimizer dialog shows the consumption assumption and lets you
+  change it. A higher value makes the optimizer expect more consumption and
+  keep a reserve in the home battery.
 
 ## 0.316.1-use-ml.17
 
