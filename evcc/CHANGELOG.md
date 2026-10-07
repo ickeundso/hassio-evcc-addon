@@ -2,6 +2,17 @@
 
 ## 0.316.1-use-ml.17
 
+- Changed: Viessmann charts use one central set of colors. The colors are
+  clearly apart now, rooms no longer share a color, and a series keeps its
+  color in every chart.
+- New: clicking legend entries highlights them in every chart, several at a
+  time.
+- Changed: range filter with 2 h, 4 h, 12 h and 24 h, calendar ranges and a
+  free span including the time.
+- Changed: pump, fan and compressor speed share one chart, the speed on a
+  left scale.
+- Fix: heat demand of a room holds until it is 0.3 K above its setpoint, as
+  the ViCare app shows it.
 - New: the stored request and responses of an optimizer run can be read via
   the API (`/api/ab/run/{id}`, with login). This allows replaying runs the
   solver ended without a proven optimum.
