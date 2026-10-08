@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.316.1-use-ml.20
+
+- Fix: after Home Assistant was in the background for a longer time, the
+  evcc page stayed on "not connected" until it was opened again. The page
+  now renews the expired Home Assistant session itself and reconnects.
+
 ## 0.316.1-use-ml.19
 
 - Fix: single wrong meter readings, far too low or far too high, are no
