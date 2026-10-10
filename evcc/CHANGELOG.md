@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.316.1-use-ml.21
+
+- New: the history view shows a price forecast chart. For each quarter hour
+  it compares the actual grid price with the value the forecast gave two and
+  three days earlier. The month and year views show the mean deviation per
+  day, so a forecast that gets worse over time is easy to spot. Data is
+  collected from now on and needs a grid tariff that reaches further than
+  two days, for example a merged tariff with a price forecast.
+- Fix: a merged tariff no longer fails completely when one of its two
+  sources is down at startup. The other source carries the tariff and the
+  missing one is retried every 15 minutes.
+
 ## 0.316.1-use-ml.20
 
 - Fix: after Home Assistant was in the background for a longer time, the
