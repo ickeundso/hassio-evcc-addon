@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.317.1-use-ml.23
+
+- Changed: the price forecast chart on the Energy page now is a card like
+  the other sections, with the legend below the chart. It only appears once
+  there is a forecast to show for the selected period.
+
 ## 0.317.1-use-ml.22
 
 - Update to evcc 0.317.1 plus the fixes made upstream since then.
