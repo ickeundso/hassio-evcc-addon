@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.317.1-use-ml.22
+
+- Update to evcc 0.317.1 plus the fixes made upstream since then.
+- Changed: the optimizer's automatic mode now has three levels: off, home
+  battery only, or home battery and charging points. An existing "on" becomes
+  "home battery and charging points", so nothing changes until you choose.
+- Changed: the optimizer runs every 5 minutes in automatic mode.
+- Fix: the home battery is no longer blocked from charging when the plan
+  shows a tiny grid export that is only rounding noise, and not when it has
+  reached its upper limit anyway.
+- Changed: the History page is replaced by the new Energy page with flows,
+  costs and consumers. The price forecast chart moved there.
+- Changed: the database uses write-ahead logging. Two extra files next to
+  the database (-wal, -shm) are normal.
+
 ## 0.316.1-use-ml.21
 
 - New: the history view shows a price forecast chart. For each quarter hour
