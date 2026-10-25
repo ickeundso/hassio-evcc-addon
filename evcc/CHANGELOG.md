@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.318.0-use-ml.30
+
+- Update to evcc 0.318.0 plus the fixes made upstream since then, among
+  them: the home battery is held when its energy is discharged later at a
+  higher price, and the remaining charge for a plan goal is estimated while
+  the plan slot is active.
+- Fix: with the optimizer in automatic mode, a full home battery was
+  switched to normal mode while the car was fast charging and discharged
+  with full power into the car, because the plan contained a token
+  discharge of a few watts. A planned discharge far below what normal mode
+  would deliver now keeps the battery on hold.
+- Fix: the optimizer planned every vehicle with voltage × minimum current ×
+  phases as its minimum power. A Renault ZOE at 8 A draws 3.5 kW instead of
+  the nominal 5.5 kW, so the plan carried too much energy per quarter hour
+  and, with demand peak attenuation on, the car never fit into the current
+  quarter hour: it was started at the slot change and stopped a few minutes
+  later, every quarter hour. evcc now measures the charge power at minimum
+  current while charging, stores it with the vehicle per phase count, and
+  plans with it.
+
 ## 0.317.1-use-ml.29
 
 - Fix: if the sponsor check failed at startup because the sponsor server
