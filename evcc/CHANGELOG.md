@@ -1,5 +1,54 @@
 # Changelog
 
+## 0.317.1-use-ml.29
+
+- Fix: if the sponsor check failed at startup because the sponsor server
+  could not be reached, evcc stayed on "sponsorship unavailable" until the
+  next restart, and every optimizer run failed with "Missing authorization
+  header". evcc now checks the token again after 1, 2, 5 and 15 minutes and
+  then every hour, and shows the sponsor again as soon as the check works.
+
+## 0.317.1-use-ml.28
+
+- Fix: restoring the solar forecast settings at startup no longer starts an
+  optimizer run before the meters are read. That run always failed and left
+  one error entry per restart in the optimizer comparison.
+- Changed: the log now shows each step of a home battery decision: what the
+  optimizer suggests, what the control cycle applies and, after a charge
+  command, whether the inverter has grid charging enabled (Huawei).
+
+## 0.317.1-use-ml.27
+
+- Fix: as long as a roof plane has no shading mask of its own yet, its
+  forecast uses the mask learned from the total. Until now the whole
+  forecast fell back to the daily scale in that case.
+
+## 0.317.1-use-ml.26
+
+- New: the solar forecast learns where the house and trees shade the
+  modules. It compares measured and forecast power for each sun position
+  and corrects every forecast quarter hour accordingly, instead of using a
+  single daily factor. Positions the sun has not reached yet use the nearest
+  known one, so the correction also works ahead into winter.
+- New: with one meter per inverter string (Huawei SUN2000, MPPT input pv1 or
+  pv2) and one solar tariff per roof plane, each plane gets its own shading
+  mask. The meters are assigned to the tariffs via `POST /api/solarplanes`.
+
+## 0.317.1-use-ml.25
+
+- New: evcc records more heat pump values from Viessmann: flow, current heat
+  output and power consumption, compressor speed setpoint, inlet pressure,
+  heating curve, SCOP and the daily heat and electricity counters. The hot
+  water tank temperature is shown in the heating water chart, the other
+  values are available in the history for the optimizer.
+
+## 0.317.1-use-ml.24
+
+- Changed: the evcc page no longer renews an expired Home Assistant session
+  by itself. The fix for reconnecting after Home Assistant was in the
+  background stays. Renewing the session is up to the Home Assistant
+  frontend.
+
 ## 0.317.1-use-ml.23
 
 - Changed: the price forecast chart on the Energy page now is a card like
