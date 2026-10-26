@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.318.0-use-ml.31
+
+- Viessmann heat pumps can be controlled through SG Ready with two Shelly
+  relays (gen 2 or newer) on the contacts 143.5 and 143.4. The new
+  advanced settings "SG Ready boost relay" and "SG Ready dim relay" of the
+  Viessmann device replace the one-time hot water charge of the API: boost
+  closes 143.5 only (SG 3, raised setpoints for heating, buffer and hot
+  water), dim closes 143.4 only (SG 1, used for § 14a only). Power and
+  temperatures are still read from the Viessmann API. Without the new
+  settings nothing changes.
+
 ## 0.318.0-use-ml.30
 
 - Update to evcc 0.318.0 plus the fixes made upstream since then, among
