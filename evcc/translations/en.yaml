@@ -11,6 +11,13 @@ configuration:
       The location of the evcc.db could be /homeassistant/* or /config/* or /data/*. 
       Where /homeassistant/* maps to /config/* and /config/* maps to /addon_configs/<slug>_evcc/* and /data/* maps to /mnt/data/supervisor/addons/data/<slug>_evcc/* in Home Assistant OS. 
       To access /data/* within the evcc container follow https://docs.evcc.io/en/docs/installation/home-assistant.
+  log_level:
+    name: "Log level (log_level)"
+    description: >
+      (OPTIONAL) Log level evcc writes to the add-on log (Home Assistant journal): fatal, error, warn, info, debug or trace.
+      Leave empty to keep the default (info, or the log setting of evcc.yaml).
+      When set, it takes precedence over the log setting in evcc.yaml.
+      The complete journal can be downloaded in evcc under Logs, download button, "All".
   OPTIMIZER_URI:
     name: "Optimizer API Endpoint (OPTIMIZER_URI)"
     description: >

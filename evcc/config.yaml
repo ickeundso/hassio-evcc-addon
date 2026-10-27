@@ -1,6 +1,6 @@
 ---
 name: evcc (Feature Branch use ML)
-version: 0.318.0-use-ml.31
+version: 0.318.0-use-ml.32
 slug: evcc_feature
 description: "evcc Feature Branch - A/B optimizer shadow evaluation + bufferSoc fix"
 url: https://github.com/ickeundso/hassio-evcc-addon
@@ -15,6 +15,7 @@ stage: experimental
 ingress: true
 ingress_port: 7070
 init: false
+hassio_api: true
 watchdog: http://[HOST]:[PORT:7070]
 image: ghcr.io/ickeundso/evcc-feature-{arch}
 options:
@@ -23,6 +24,7 @@ options:
 schema:
   sqlite_file: str
   config_file: str?
+  log_level: list(fatal|error|warn|info|debug|trace)?
   OPTIMIZER_URI: url?
   ML_OPTIMIZER_URI: url?
   SEMP_BASE_URL: url?

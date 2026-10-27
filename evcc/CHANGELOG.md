@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.318.0-use-ml.32
+
+- Fix: with SG Ready relays, the hot water temperature above the heat
+  pump's limit kept every boost off, at cheap prices and with pv surplus.
+  In the relay variant the heat pump limits itself through its SG 3
+  setpoints, so evcc applies no temperature limit there and no longer
+  writes the hot water target to the Viessmann. The loadpoint shows the
+  heat pump's own target instead of a limit selection. The API variant
+  is unchanged.
+- New add-on option "Log level" sets the level evcc writes to the add-on
+  log. Under Logs in evcc, the download button now offers the complete
+  add-on log in addition to the recent entries kept in memory. The add-on
+  needs access to the Supervisor API for this.
+- SG Ready of the Viessmann device can be switched off in the advanced
+  settings. The relays stay configured and are set back to normal once,
+  after that evcc only shows the readings and never switches the heat
+  pump. The loadpoint then hides the mode selection.
+- Heat pumps with Viessmann readings: evcc records every hot water run,
+  whether it started on its own or during a boost, with duration, energy
+  and how quickly the heat pump reacted to the boost. It also records how
+  old the Viessmann data is. Nothing is switched by this, the data
+  prepares the boost planning.
+
 ## 0.318.0-use-ml.31
 
 - Viessmann heat pumps can be controlled through SG Ready with two Shelly
