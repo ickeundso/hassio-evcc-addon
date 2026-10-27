@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.318.0-use-ml.34
+
+- Fix: while the optimizer controls the home battery, a heat pump no
+  longer starts or keeps running on the home battery because of the
+  battery settings "start charging from 60 %" and "continue down to
+  35 %". The optimizer plans the battery, so such a boost worked against
+  its plan, for example at a high price in the evening. Solar surplus,
+  cheap grid prices and the manual battery boost work as before. Vehicles
+  and setups without the optimizer are unchanged.
+- Heat pumps with Viessmann readings: the hot water run recording keeps a
+  run together across a defrost and records every boost as a whole, from
+  switching on to off, with its energy, whether the heat pump had finished
+  and the hot water temperature at the start. evcc learns from these
+  records how much energy a run and a boost take and at which hours the
+  heat pump charges the hot water on its own. Nothing is switched by this
+  yet, the debug log shows what was learned.
+- Boost planning for heat pumps, shadow mode only: after every optimizer
+  run evcc decides whether a boost would be worth it now, later or not at
+  all, at the real cost of the electricity in the optimizer plan, including
+  energy from the home battery. It only boosts in smart mode, with at least
+  5 ct expected saving and 12 hours between two boosts. Nothing is
+  switched, the decisions are recorded and logged as "boost planning
+  (shadow)".
+
 ## 0.318.0-use-ml.33
 
 - Fix: the hot water run recording of 0.318.0-use-ml.32 saw no runs on
