@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.318.0-use-ml.33
+
+- Fix: the hot water run recording of 0.318.0-use-ml.32 saw no runs on
+  heat pumps without the charging flag, among them the Vitocal 250-A.
+  evcc now detects the hot water charge by the position of the heat
+  pump's switching valve.
+
 ## 0.318.0-use-ml.32
 
 - Fix: with SG Ready relays, the hot water temperature above the heat
