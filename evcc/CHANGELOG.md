@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.318.0-use-ml.36
+
+- Change: when the optimizer controls the loadpoints, a heat pump with
+  SG Ready status is no longer switched by fixed thresholds in smart
+  mode. A small solar surplus of about 300 W started a boost that drew
+  700 W and more, the grid supplied the rest. Solar surplus, the cheap
+  price limit and always charge no longer boost the heat pump, only the
+  optimizer's boost planning decides. While that planning only records
+  its decisions, the heat pump is not boosted in smart mode and runs on
+  its own control. Now mode still boosts on demand.
+
 ## 0.318.0-use-ml.35
 
 - Fix: a heat pump charging hot water on its own was boosted although
