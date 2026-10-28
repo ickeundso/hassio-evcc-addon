@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.318.0-use-ml.35
+
+- Fix: a heat pump charging hot water on its own was boosted although
+  there was no surplus. In solar and smart mode evcc counted the heat
+  pump's own consumption as surplus it could hand out, so every natural
+  hot water charge could be extended by a boost, for example from the
+  home battery. A heat pump that runs on its own no longer counts as
+  surplus. Real solar surplus starts the boost as before.
+
 ## 0.318.0-use-ml.34
 
 - Fix: while the optimizer controls the home battery, a heat pump no
