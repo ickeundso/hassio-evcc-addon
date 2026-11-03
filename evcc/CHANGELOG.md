@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.318.0-use-ml.38
+
+- New: the charge and discharge efficiency of the home battery can be set
+  in the optimizer configuration, in percent. Without a value both stay at
+  90 %. The optimizer uses them to decide whether charging from the grid
+  pays off. The charge value also applies to vehicles.
+- Change: the price forecast in the energy view shows the published
+  day-ahead price for the rest of the day and, once published, for
+  tomorrow. Forecast values never appear in that line, which is now
+  labelled day-ahead price.
+- New: the hot water circulation pump of a Viessmann heat pump can be
+  started on demand, for example by a motion sensor in Home Assistant.
+  POST /api/config/service/viessmann/circulation runs the pump for about
+  10 minutes. The API has no on/off command, so evcc writes the pump's
+  weekly schedule: the fixed plan configured in evcc plus one window from
+  now, and the fixed plan again once that window has ended. Changes to
+  the circulation schedule in the ViCare app are overwritten, configure
+  the fixed plan in evcc instead (GET/POST .../circulation/config).
+
 ## 0.318.0-use-ml.36
 
 - Change: when the optimizer controls the loadpoints, a heat pump with
