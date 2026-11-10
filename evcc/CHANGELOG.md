@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.318.0-use-ml.39
+
+- New: the devices behind a Viessmann gateway, for example single radiator
+  thermostats, can be listed with
+  GET /api/config/service/viessmann/equipment?detail=devices, optionally
+  limited to one gateway with gateway_serial. The listed IDs can be passed
+  as device_id to .../viessmann/features.
+
 ## 0.318.0-use-ml.38
 
 - New: the charge and discharge efficiency of the home battery can be set
