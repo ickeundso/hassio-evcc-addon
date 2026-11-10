@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.318.0-use-ml.41
+
+- New: GET /api/config/service/viessmann/features?scope=gateway returns
+  the data points at gateway level instead of those of a single device.
+  Meant for occasional inspection, one request per call.
+
 ## 0.318.0-use-ml.40
 
 - New: the valve opening of single Viessmann radiator thermostats can be
