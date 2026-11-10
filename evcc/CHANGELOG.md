@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.318.0-use-ml.40
+
+- New: the valve opening of single Viessmann radiator thermostats can be
+  recorded every 15 minutes. List the devices with their names under
+  "valves" in the Viessmann room logging configuration
+  (POST /api/config/service/viessmann/rooms). The values appear in the
+  history group "valve", one series per device, in percent. Each listed
+  device costs 96 requests per day from the Viessmann API quota.
+
 ## 0.318.0-use-ml.39
 
 - New: the devices behind a Viessmann gateway, for example single radiator
