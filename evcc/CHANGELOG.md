@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.319.0-use-ml.44
+
+- Based on evcc 0.319.0 (was 0.318.0), see the evcc release notes.
+- Breaking (upstream): Huawei curtailment moved from the meter to a
+  curtailer device of its own (huawei-sun2000-sdongle). A curtailment set
+  up on the SUN2000 Hybrid meter has to be added as curtailer again. The
+  fork's mapping of every active power control mode moved with it.
+- The optimizer now also counts pv charging of the home battery as no grid
+  charging, suggests only battery modes the battery supports and gives
+  vehicles no export price floor at the end of the horizon, all with the
+  configured battery efficiencies.
+
 ## 0.318.0-use-ml.43
 
 - New: the temperature a Viessmann radiator thermostat measures at its head
