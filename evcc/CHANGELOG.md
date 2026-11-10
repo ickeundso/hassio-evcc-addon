@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.318.0-use-ml.42
+
+- New: the Viessmann page shows the recorded radiator valve openings in
+  percent as a chart below the room temperatures, one line per valve, for
+  the same time range as the other charts.
+
 ## 0.318.0-use-ml.41
 
 - New: GET /api/config/service/viessmann/features?scope=gateway returns
