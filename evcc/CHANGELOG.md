@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.318.0-use-ml.43
+
+- New: the temperature a Viessmann radiator thermostat measures at its head
+  is recorded with its valve opening, without an extra API request. The
+  valve chart shows it dashed in the valve's color on a °C axis.
+
 ## 0.318.0-use-ml.42
 
 - New: the Viessmann page shows the recorded radiator valve openings in
