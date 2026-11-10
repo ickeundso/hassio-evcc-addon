@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.319.0-use-ml.45
+
+- Fix: energy from the home battery is costed by what charging it cost
+  (grid charge at the grid price, pv charge at the feed-in price, losses
+  from the configured battery efficiencies) instead of always at the
+  feed-in price. Costs per consumer and loadpoint were far too low when
+  the battery charged from the grid.
+- The Viessmann page shows the thermostat head temperature in a chart of
+  its own, the valve opening chart only shows percent.
+
 ## 0.319.0-use-ml.44
 
 - Based on evcc 0.319.0 (was 0.318.0), see the evcc release notes.
