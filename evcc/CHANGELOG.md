@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.319.0-use-ml.46
+
+- Fix: the live home price and the price of every new charging session
+  (car and heat pump) now cost battery energy by what charging the
+  battery cost in the last 48 hours, pv share first. Before, battery
+  energy always counted at the feed-in price.
+- On first start, finished sessions that got battery energy are priced
+  again once from the stored energy flows. Sessions without enough flow
+  data keep their price. The statistics tiles follow automatically.
+
 ## 0.319.0-use-ml.45
 
 - Fix: energy from the home battery is costed by what charging it cost
