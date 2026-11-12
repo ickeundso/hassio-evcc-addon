@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.319.0-use-ml.47
+
+- Fix: the Viessmann chart "Temperature at the thermostat head" is now
+  called "Radiator thermostat setpoint". The value ViCare reports there is
+  the temperature the thermostat controls to, not a measurement: it follows
+  the room schedule and shows frost protection on an unused thermostat.
+  Values recorded since .43 stay visible.
+
 ## 0.319.0-use-ml.46
 
 - Fix: the live home price and the price of every new charging session
